@@ -2,7 +2,7 @@
 
 ## Objective
 
-Investigate the aerodynamic characteristics of different wing planforms using CAD modelling and CFD simulation.
+Learn & Investigate the aerodynamic characteristics of different wing planforms using CAD modelling and CFD simulation.
 
 ## Wing Types to be investigated
 
