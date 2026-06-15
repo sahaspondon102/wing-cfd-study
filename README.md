@@ -15,7 +15,7 @@ Investigate the aerodynamic characteristics of different wing planforms using CA
 Project Started: June 2026
 
 Phase Tracking:
-- [x] Theory
+- [x] Theory *(In progress)*
 - [ ] CAD Modelling
 - [ ] CFD Simulation
 - [ ] Data Analysis
