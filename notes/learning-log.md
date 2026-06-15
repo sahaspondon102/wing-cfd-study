@@ -1,5 +1,5 @@
 Since this is a personal project where I learn as I do, this log will keep track of my personal learning progress since the start of the project. Detailed theory notes will be in theory/ of this repository.
-
+---
 # June 12th
 Topic: Aerodynamics Of Flight
 * Learned about the four main forces of flight (Lift, Weight, Thrust & Drag)
