@@ -42,8 +42,8 @@ plt.title("NACA 2412 Airfoil")
 # Export airfoil to dxf file
 CHORD = 200.0 #mm
 #Scale coordinates to desired chord length
-scaled_x = [coord * CHORD for coord in x]
-scaled_y = [coord * CHORD for coord in y]
+scaled_x = x
+scaled_y = y
 
 doc = ezdxf.new()
 msp = doc.modelspace()
