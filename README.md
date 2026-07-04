@@ -2,7 +2,7 @@
 
 ### Objective & Current Standing
 
-In this project, we will use a NACA 2412 airfoil in order to CAD Model wings with different planforms, then study the aerodynamic effect of the planform using CFD, which will then result in a final report. I have currently reviewed all required theoritical concepts (Notes will be uplaoded soon for better understanding) & have started to learn the ropes of Onshape in order to model the NACA 2412 airfoil. This airfoil is the foundation of our project.
+In this project, we will use a NACA 2412 airfoil in order to CAD Model wings with different planforms, then study the aerodynamic effect of the planform using CFD, which will then result in a final report. I have currently reviewed all required theoritical concepts (Notes will be uplaoded soon for better understanding) & have started modelling the NACA 2412 airfoil. This airfoil is the foundation of our project.
 
 **Why NACA 2412?** <br>
 NACA 2412 is one of the most extensively studied general-purpose airfoils. Its moderate camber provides good lift characteristics at low to moderate angles of attack, making it suitable for educational CFD studies where the effects of wing planform are the primary variable. Using a standardized airfoil allows comparisons to published aerodynamic data.
