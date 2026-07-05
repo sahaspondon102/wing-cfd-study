@@ -30,4 +30,7 @@ ___
 * Ran into a issue where I couldn't find a proper .dat to .dxf converter. So I wrote a short script in order to read, plot and generate a .dxf for the NACA 2412 airfoil. The full .py file can be found in /scripts. Final dxf file is also in /cad of this repository and it is scaled to the 200 mm chord we're using for this project. <br>
 <br>
 <img width="800" height="469.5" alt="image" src="https://github.com/user-attachments/assets/c988a109-5443-42eb-9d09-0ed6f0e6188e" />
+<br>
+* Imported the airofil into Onshape and extruded with #Span (Note that we are using parametric CAD) to create the first rectangular wing. Points were connected with splines in order to ensure a CFD-ready CAD model. CAD files can be found in /cad.
+
 
