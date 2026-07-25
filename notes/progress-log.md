@@ -66,4 +66,7 @@ Drifted off the project due to unavoidable responsibilities & travel
 
 ## July 18th - Present
 
+* Started off by completing the pre-processing, running the solver, post-processing & analyzing the airflow using ParaView. I did this on the "pitzDaily" OpenFOAM tutorial in order to get comfortable with Linux commands & OpenFOAM folder structure.
+* Only after a few attempts, I have got the correct airflow visulaization:
+<img width="835" height="488" alt="Screenshot 2026-07-21 140954" src="https://github.com/user-attachments/assets/8f1cd6c4-c9fc-4cf8-9bd1-bec945c886ea" />
 
