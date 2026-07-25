@@ -17,7 +17,7 @@
 10. Axes of Rotation in Flight
 11. Stability Of an Aircraft in Flight
 
-*Please note that detailed notes for the theoretical concepts will be posted on the theory/ folder*
+*Please note that detailed notes for the theoretical concepts is posted as a pdf*
 
 ---
 
@@ -60,4 +60,10 @@ Drifted off the project due to unavoidable responsibilities & travel
 * Convergence and it's relations with Stability & Consistency
 * Types of visualizations & analysis of results
 
-*Please note that detailed notes for the theoretical concepts will be posted on the theory/ folder*
+*Please note that detailed notes for the theoretical concepts is posted as a pdf*
+
+---
+
+## July 18th - Present
+
+
