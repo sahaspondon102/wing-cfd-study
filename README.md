@@ -18,10 +18,10 @@ wing-cfd-study/
 *Last Updated: August 26th, 2026*
 
 ### Software Stack
-<img width="288" height="162" alt="openfoam logo" src="https://github.com/user-attachments/assets/1032c980-45f2-4c49-9fbf-6761effc7bc1" />
-<img width="162" height="162" alt="onshape logo" src="https://github.com/user-attachments/assets/20f451c6-619a-41e4-aada-8fe2c11e666a" />
-<img width="162" height="162" alt="python logo" src="https://github.com/user-attachments/assets/704de866-b7b2-4c09-bddb-d3181fd07601" />
-<img width="288" height="162" alt="matlab logo" src="https://github.com/user-attachments/assets/c8015ec6-da89-4b60-8523-6f7a329225b2" />
+<img width="172.8" height="97.2" alt="openfoam logo" src="https://github.com/user-attachments/assets/1032c980-45f2-4c49-9fbf-6761effc7bc1" />
+<img width="97.2" height="97.2" alt="onshape logo" src="https://github.com/user-attachments/assets/20f451c6-619a-41e4-aada-8fe2c11e666a" />
+<img width="97.2" height="97.2" alt="python logo" src="https://github.com/user-attachments/assets/704de866-b7b2-4c09-bddb-d3181fd07601" />
+<img width="172.8" height="97.2" alt="matlab logo" src="https://github.com/user-attachments/assets/c8015ec6-da89-4b60-8523-6f7a329225b2" />
 
 
 
