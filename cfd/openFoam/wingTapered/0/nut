@@ -43,12 +43,12 @@ boundaryField
     }
     sidePlusY
     {
-        type            symmetryPlane;
+        type            symmetryPlane; // Ensure that root wingtip votices are avoided.
     }
 
     wing
     {
-        type            nutUSpaldingWallFunction; //This is changed from nutLowReWallFunction as boundary layers were retired.
+        type            nutUSpaldingWallFunction;
         value           uniform 0;
     }
 }

@@ -77,14 +77,6 @@ functions
     patches         (wing);
 }
 
-wallShearStress1
-{
-    type            wallShearStress;
-    libs            ("libfieldFunctionObjects.so");
-    patches         (wing);
-    writeControl    writeTime;
-}
-
 CpField
 {
     type            pressure;

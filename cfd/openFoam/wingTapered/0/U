@@ -10,7 +10,7 @@ FoamFile
 
 dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (29.886 0 2.616);
+internalField   uniform (29.886 0 2.616); // Vector field for velocity based on 5 deg AoA
 
 boundaryField
 {

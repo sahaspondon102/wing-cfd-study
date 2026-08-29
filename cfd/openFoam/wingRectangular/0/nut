@@ -48,7 +48,7 @@ boundaryField
 
     wing
     {
-        type            nutUSpaldingWallFunction; //This is changed from nutLowReWallFunction as boundary layers were retired.
+        type            nutUSpaldingWallFunction;
         value           uniform 0;
     }
 }

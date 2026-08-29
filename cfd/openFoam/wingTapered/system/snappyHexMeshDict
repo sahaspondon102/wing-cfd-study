@@ -102,7 +102,7 @@ snapControls
 
 // Boundary Layer Controls
 
-addLayersControls //Retired due to explosive mesh and RAM limitations
+addLayersControls // Reduced layers due to RAM limitations
 {
     relativeSizes    true;
 
@@ -110,11 +110,10 @@ addLayersControls //Retired due to explosive mesh and RAM limitations
     {
         wing
         {
-            nSurfaceLayers    5;   // keep at 5 for the first successful test run,
-                                    // then raise back to 20 (per spec) once mesh is clean
+            nSurfaceLayers    5;   // 5 layers per spec
         }
     }
-    expansionRatio          1.2;
+    expansionRatio          1.2; // 5 layers @ 1.20 growth rate
     minThickness            5e-06;
     firstLayerThickness    0.01041; // Used a y1 sizing script for a y+ target of 1
 

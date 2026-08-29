@@ -8,7 +8,8 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
+solvers //Tolerance was reduced as solver was taking
+// around 600 s/iter. This change was specific to the tapered wing case only
 {
     p
     {
