@@ -89,3 +89,15 @@ After almost a month long CFD grind, I decided to switch to OnShape again to des
 <img width="325" height="331" alt="image" src="https://github.com/user-attachments/assets/a311bb25-4d29-472a-9f81-3246e52d2b28" />
 
 <img width="325" height="331" alt="image" src="https://github.com/user-attachments/assets/0f92fd76-514e-496d-98af-72fbd5fa8509" />
+
+---
+August 25th - August 29th
+
+I have finalized all of the OpenFoam file configurations and ran the simulations. All three cases converged perfectly with low residuals and all files + visuals are up on this repository. The initial readme explains the structure of this repository.
+
+<img width="297" height="187.2" alt="image" src="https://github.com/user-attachments/assets/1b0ccc77-1f66-4c22-8413-fde8a41c5aa0" />
+
+I have begun work on compiling the final documentation pdf using LaTeX through Overleaf. This is a massive milestone as the project now has reached a conclusive state and only requires final touches & polishing. This marks the date of my first successful proper project in my field of interest.
+
+<img width="417.5" height="244" alt="image" src="https://github.com/user-attachments/assets/2d7ebc4b-651d-43a5-90f3-4070461f0a8e" />
+
