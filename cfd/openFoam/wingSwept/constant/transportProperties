@@ -1,0 +1,22 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Constant fluid properties, air at the same rho/mu used in the y1 sizing
+// calc (rho=1.225 kg/m3, mu=1.7894e-5 Pa.s -> nu = mu/rho).
+// simpleFoam is a kinematic-pressure solver, so only nu is needed here;
+// rho only re-enters explicitly in the forceCoeffs function object
+// (controlDict) via rhoInf.
+
+transportModel  Newtonian;
+
+nu              nu [0 2 -1 0 0 0 0] 1.4607e-05;
+
+// ************************************************************************* //

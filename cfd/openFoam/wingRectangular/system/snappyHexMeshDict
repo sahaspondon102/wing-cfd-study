@@ -1,0 +1,162 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh false;
+snap            false;
+addLayers       true;
+// Geometry — surfaces used for castellation and as refinement volumes
+geometry
+{
+    rectangular_600-200.stl
+    {
+        type        triSurfaceMesh;
+        name        wing;
+        scale       0.001;
+    }
+
+    // A box around the wing where we want extra background refinement
+    refinementBox
+    {
+        type        searchableBox;
+        min         (-0.10 -0.70 -0.20);
+        max         ( 0.60  0.00  0.20);
+    }
+    teRefinementBox
+    {
+       type         searchableBox;
+       min          (0.20 -0.7  -0.05);
+       max          (0.60 0.00  0.05);
+    }
+};
+// Castellated Mesh Controls
+
+castellatedMeshControls
+{
+    maxLocalCells           2000000;
+    maxGlobalCells          8000000;
+    minRefinementCells      10;
+    nCellsBetweenLevels     4;
+
+    features
+    (
+        {
+            file    "rectangular_600-200.eMesh";
+            level   7;
+        }
+    );
+
+    refinementSurfaces
+    {
+        wing
+        {
+            level   (6 7);
+            patchInfo
+            {
+                type    wall;
+            }
+        }
+    }
+
+    resolveFeatureAngle     60;
+
+    refinementRegions
+    {
+        refinementBox
+        {
+            mode    inside;
+            levels  ((1e15 5));
+        }
+        teRefinementBox
+        {
+            mode    inside;
+            levels  ((1e15 7));
+         }
+    }
+
+    locationInMesh          (1.5 -0.3 0.5);
+
+    allowFreeStandingZoneFaces  true;
+}
+
+// Snap Controls
+
+snapControls
+{
+    nSmoothPatch            3;
+    tolerance               4.0;
+    nSolveIter              50;
+    nRelaxIter              8;
+
+    nFeatureSnapIter        10;
+    implicitFeatureSnap     false;
+    explicitFeatureSnap     true;
+    multiRegionFeatureSnap  false;
+}
+
+// Boundary Layer Controls
+
+addLayersControls //Retired due to explosive mesh and RAM limitations
+{
+    relativeSizes    true;
+
+    layers
+    {
+        wing
+        {
+            nSurfaceLayers    5;   // keep at 5 for the first successful test run,
+                                    // then raise back to 20 (per spec) once mesh is clean
+        }
+    }
+    expansionRatio          1.2;
+    minThickness            5e-06;
+    firstLayerThickness    0.01041; // Used a y1 sizing script for a y+ target of 1
+
+    nGrow                    1;
+    featureAngle             60;
+    nRelaxIter                20;
+    nSmoothSurfaceNormals     1;
+    nSmoothNormals            3;
+    nSmoothThickness         10;
+    nMedialAxisIter            10;
+    maxFaceThicknessRatio     0.5;
+    maxThicknessToMedialRatio 0.5;
+    minMedialAxisAngle       80;
+    nBufferCellsNoExtrude     4;
+    nLayerIter                40;
+}
+
+meshQualityControls
+{
+    maxNonOrtho             65;
+    maxBoundarySkewness     20;
+    maxInternalSkewness     4;
+    maxConcave              80;
+    minFlatness             0.5;
+    minVol                  1e-13;
+    minTetQuality           1e-30;
+    minArea                 -1;
+    minTwist                0.02;
+    minDeterminant          0.001;
+    minFaceWeight           0.05;
+    minVolRatio             0.01;
+    minTriangleTwist        -1;
+
+    nSmoothScale            4;
+    errorReduction          0.75;
+
+    relaxed
+    {
+        maxNonOrtho         75;
+    }
+}
+
+mergeTolerance              1e-6;
+
+// ************************************************************************* //

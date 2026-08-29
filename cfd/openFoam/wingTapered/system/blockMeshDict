@@ -1,0 +1,106 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM
+   \\    /   O peration     |
+    \\  /    A nd           |
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// All coordinates below are in millimetres. This factor converts them to
+// metres, which is the unit OpenFOAM solvers assume (kg-m-s SI units).
+convertToMeters 0.001;
+
+// Domain corner coordinates (mm), derived from chord=200mm, span=600mm:
+//   x: -1000 (5c upstream)   to  2200 (10c downstream after 200mm chord)
+//   y: -1200 (tip + 3c)      to   0 (Root chord at symmetryPlane)
+//   z: -1000 (5c below)      to  1000 (5c above)
+vertices
+(
+    (-1000 -1200 -1000)   // 0
+    ( 2200 -1200 -1000)   // 1
+    ( 2200   0 -1000)   // 2
+    (-1000   0 -1000)   // 3
+    (-1000 -1200  1000)   // 4
+    ( 2200 -1200  1000)   // 5
+    ( 2200   0  1000)   // 6
+    (-1000   0  1000)   // 7
+);
+
+// Background cell size ~100 mm in every direction.
+// 3200/50=64, 1200/50=24, 2000/50=40
+// snappyHexMesh refines locally near the wing, this is just the coarse base.
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (64 24 40) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+// Patch names used later in 0/ boundary conditions and snappyHexMeshDict.
+boundary
+(
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (1 2 6 5)
+        );
+    }
+    bottom
+    {
+        type patch;
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+    top
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+    sideMinusY
+    {
+        type patch;
+        faces
+        (
+            (0 1 5 4)
+        );
+    }
+    sidePlusY
+    {
+        type symmetryPlane;
+        faces
+        (
+            (3 7 6 2)
+        );
+    }
+);
+
+mergePatchPairs
+(
+);
+
+// ************************************************************************* //

@@ -1,0 +1,23 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      surfaceFeatureExtractDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+rectangular_600-200.stl
+{
+    extractionMethod        extractFromSurface;
+
+    extractFromSurfaceCoeffs
+    {
+        includedAngle       150;
+    }
+
+    writeObj                yes;
+}
+
+// ************************************************************************* //

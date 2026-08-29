@@ -1,0 +1,103 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     simpleFoam;
+
+startFrom       startTime;
+startTime       0;
+
+stopAt          endTime;
+endTime         500;
+
+deltaT          1;
+
+writeControl    timeStep;
+writeInterval   50;
+
+purgeWrite      2;
+
+writeFormat     ascii;
+writePrecision  6;
+writeCompression off;
+
+timeFormat      general;
+timePrecision   6;
+
+runTimeModifiable true;
+
+functions
+{
+    forceCoeffs1
+    {
+        type            forceCoeffs;
+        libs            ("libforces.so");
+
+        writeControl    timeStep;
+        writeInterval   1;
+
+        patches         (wing);
+
+        // Force coefficients are reported relative to the FREESTREAM
+        // direction (5 deg), not the body/chord axes. Our geometry is aligned with the body axes (0 deg), so we need
+        // to rotate the freestream vector.
+        // dragDir  = freestream unit vector  = (cos5, 0, sin5)
+        // liftDir  = perpendicular, rotated +90 deg = (-sin5, 0, cos5)
+        dragDir         (0.9962 0 0.0872);
+        liftDir         (-0.0872 0 0.9962);
+
+        CofR            (0.05 -0.3 0);
+        pitchAxis       (0 1 0);
+
+        rho             rhoInf;
+        rhoInf          1.225;
+
+        magUInf         30;
+        lRef            0.2;        // chord length
+        Aref            0.12;       // planform area = chord x span = 0.2 x 0.6 [m^2]
+
+        binData //Lift/drag distributed along the span
+        {
+          nBin  20;
+          direction (0 1 0);
+          cumulative no;
+        }
+}
+    yPlus1 //Validates the no boundary layer approach by plotting over wingspan
+{
+    type            yPlus;
+    libs            ("libfieldFunctionObjects.so");
+    writeControl    writeTime;
+    patches         (wing);
+}
+
+CpField
+{
+    type            pressure;
+    libs            ("libfieldFunctionObjects.so");
+    Cp              yes;
+    Cref            0;
+    rho             rhoInf;
+    rhoInf          1.225;
+    URef            30;
+    writeControl    writeTime;
+}
+
+residuals1
+{
+    type            residuals;
+    libs            ("libutilityFunctionObjects.so");
+    writeControl    timeStep;
+    writeInterval   1;
+    fields          (p U k omega);
+}
+
+}
+
+// ************************************************************************* //

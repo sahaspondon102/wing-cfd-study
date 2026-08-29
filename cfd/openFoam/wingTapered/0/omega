@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      omega;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 -1 0 0 0 0];
+// omega = sqrt(k) / (Cmu^0.25 * L), L ~ 0.07*chord
+internalField   uniform 143.75;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 143.75;
+    }
+
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform 143.75;
+        value           uniform 143.75;
+    }
+
+    top
+    {
+        type            zeroGradient;
+    }
+    bottom
+    {
+        type            zeroGradient;
+    }
+    sideMinusY
+    {
+        type            zeroGradient;
+    }
+    sidePlusY
+    {
+        type            symmetryPlane;
+    }
+
+    wing
+    {
+        type            omegaWallFunction;
+        value           uniform 143.75;
+    }
+}
+
+// ************************************************************************* //
