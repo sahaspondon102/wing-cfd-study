@@ -2,7 +2,7 @@
 
 ### Objective & Current Standing
 
-This is a pre-university project + study designed to be a learning experience for an end-to-end workflow in my field of specialization & interest. This is a comparative RANS study of planform effects on finite-wing aerodynamics for three different planforms following the same airfoil profile (NACA 2412). The workflow for the project is demonstrated at the end of this readme in the form of a checklist. The *notes/* folder will be updated with a documentation pdf which will include intricate technical details of the project once the project reaches completion.
+This is a pre-university project + study designed to be a learning experience for an end-to-end workflow in my field of specialization & interest. This is a comparative RANS study of planform effects on finite-wing aerodynamics for three different planforms following the same airfoil profile (NACA 2412). The workflow for the project is demonstrated at the end of this readme in the form of a checklist. The *notes/* folder contains a documentation pdf which includes intricate technical details of the project.
 
 ### Repository Structure
 ```text
@@ -41,10 +41,11 @@ wing-cfd-study/
 ### Status
 
 Project Started: June 2026
+Project Completed: August 2026
 
 Phase Tracking:
 - [x] Theory
 - [x] CAD Modelling
 - [x] CFD Simulation *(In progress)*
-- [ ] Post-Processing
-- [ ] Report Writing
+- [x] Post-Processing
+- [x] Report Writing
