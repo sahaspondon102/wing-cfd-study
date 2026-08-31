@@ -101,3 +101,10 @@ I have begun work on compiling the final documentation pdf using LaTeX through O
 
 <img width="417.5" height="244" alt="image" src="https://github.com/user-attachments/assets/2d7ebc4b-651d-43a5-90f3-4070461f0a8e" />
 
+---
+August 30th - August 31st
+
+The project is completely packaged. I compiled the final documentation in Overleaf and all the folders in this repository has been updated.
+
+*DATE OF COMPLETION: 31.08.2026*
+
