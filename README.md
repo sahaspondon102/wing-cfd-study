@@ -28,13 +28,13 @@ wing-cfd-study/
 ### Wing Planforms To Be Investigated
 
 - Rectangular Wings
-<img width="480" height="320" alt="rectangular" src="https://github.com/user-attachments/assets/d802ae87-f7fa-42be-9a40-7d3c697d101c" />
+<img width="192" height="128" alt="rectangular" src="https://github.com/user-attachments/assets/d802ae87-f7fa-42be-9a40-7d3c697d101c" />
 
 - Tapered Wings
-<img width="480" height="320" alt="tapered" src="https://github.com/user-attachments/assets/a4efa9bd-8924-461b-8c2c-581ba67839a3" />
+<img width="192" height="128" alt="tapered" src="https://github.com/user-attachments/assets/a4efa9bd-8924-461b-8c2c-581ba67839a3" />
 
 - Constant Chord Swept Back Wings
-<img width="480" height="320" alt="constant_chord_swept_back" src="https://github.com/user-attachments/assets/e9b3192e-8eb2-4f05-88ba-eca0467cc3e4" />
+<img width="192" height="128" alt="constant_chord_swept_back" src="https://github.com/user-attachments/assets/e9b3192e-8eb2-4f05-88ba-eca0467cc3e4" />
 
 *These are reference images only. They do not represent the model used in this project accurately (check cad/ for design drawings and OnShape screenshots), but is rather meant to provide a visual cue concerning the real-world application of the wing planforms investigated in this study.*
 
