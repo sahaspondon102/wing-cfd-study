@@ -41,6 +41,7 @@ wing-cfd-study/
 ### Status
 
 Project Started: June 2026
+
 Project Completed: August 2026
 
 Phase Tracking:
